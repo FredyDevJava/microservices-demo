@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: configserver
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/FredyDevJava/spring-cloud-server-config-repository
+          username: FredyDevJava
+          password: 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
+          clone-on-start: true
+      fail-fast: true
+  security:
+    user:
+      name: spring_cloud_user
+      password: springCloud_Pwd!
+
