@@ -7,11 +7,11 @@ spring:
         git:
           uri: https://github.com/FredyDevJava/spring-cloud-server-config-repository
           username: FredyDevJava
-          password: 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
+          password: '{cipher}814121bb90175c43887483a2b70bfd737fd5f550f17742c5c9e49e0ef299ce29e92e70b2e82c0abbc8e65d18f5c694e82a6cd56f65791bd83d94183b154f1ae2'
           clone-on-start: true
       fail-fast: true
   security:
     user:
       name: spring_cloud_user
-      password: springCloud_Pwd!
+      password: '{cipher}4aa0a6a8444607dc352f8372f25b49e61650bdc239942182a2677c36c9418df4d3a72b5a67c28225cd5b201f66801892'
 
