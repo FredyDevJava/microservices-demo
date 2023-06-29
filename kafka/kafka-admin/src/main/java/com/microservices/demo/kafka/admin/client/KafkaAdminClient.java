@@ -9,6 +9,8 @@ import org.apache.kafka.clients.admin.NewTopic;
 import org.apache.kafka.clients.admin.TopicListing;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.EnableMBeanExport;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
 import org.springframework.retry.RetryContext;
@@ -40,10 +42,11 @@ public class KafkaAdminClient {
         this.webClient = webClient;
     }
 
-    public void createTopic(){
+    public void createTopics() {
         CreateTopicsResult createTopicsResult;
         try {
             createTopicsResult = retryTemplate.execute(this::doCreateTopics);
+            LOG.info("Create topic result {}", createTopicsResult.values().values());
         } catch (Throwable t) {
             throw new KafkaClientException("Reached max number of retry for creating kafka topic(s)!", t);
         }

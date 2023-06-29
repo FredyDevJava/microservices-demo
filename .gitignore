@@ -7,6 +7,8 @@ target/
 !**/docker-logs/
 docker/docker-logs/
 config-server-repository/
+kafka-to-elastic-service/logs/
+twitter-to-kafka-service/twitter-to-kafka-service/logs/
 
 ### STS ###
 .apt_generated
